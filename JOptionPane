@@ -1,0 +1,22 @@
+import javax.swing.*;
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+           String vaccine =  JOptionPane.showInputDialog("Please enter vaccine name?(Option AZ, BNT, Moderna, Janssen):");
+           vaccine = vaccine.toLowerCase();
+
+           if (vaccine.equals("az")){
+               JOptionPane.showMessageDialog(null, "AZ\n From UK and Sweden \n type: Virus \n Quatities:2 \n level: middle");
+           } else if (vaccine.equals("bnt")) {
+               JOptionPane.showMessageDialog(null, "bnt\n From Germany and USA \n type: mRNA \n Quatities:1 \n level: middle");
+           } else if (vaccine.equals("moderna")) {
+               JOptionPane.showMessageDialog(null, "MODERNA\n USA \n type: mRNA \n Quatities:4 \n level: low");
+           } else if (vaccine.equals("janssen")) {
+               JOptionPane.showMessageDialog(null, "MODERNA\n French \n type: Virus \n Quatities:3 \n level: high");
+           } else {
+               JOptionPane.showMessageDialog(null, "Can't read the information sorry!");
+           }
+    }
+    }
