@@ -1,0 +1,27 @@
+中階題目 1 #編寫一個名為"mySort()”的函數，唯一的參數為一個array of integers，return type為int[]，
+返回的array與參數array的元素相同，但由小到大排序。
+
+    
+public class Main {
+    public static int[] mySort(int[] arr) {
+        for(int i = arr.length -1; i > 0; i--) {
+            for(int j = i; j >= 0; j--) {
+                if(arr[j] > arr[i]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+}
+
+
+public static void main(String[] args) {
+        int[] array = {5, 2, 34, 4, 6, 677, 12, 45, 15, 21, 1234, 612, 778, 303, 132, 245, 677};
+        mySort(array);
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+    }
+}

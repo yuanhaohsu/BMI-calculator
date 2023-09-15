@@ -1,0 +1,41 @@
+#中階題目 2 - 編寫一個名為"shuffle()”的函數，唯一的參數為一個array of integers，return type為int[]，
+返回的array與參數array的元素相同，但元素順序為隨機排序的結果。
+
+    import java.util.Random;
+
+    public class Main {
+        public static int[] shuffle(int[] arr){
+            int currentIndex = arr.length -1; 
+            while(currentIndex > 0 ){
+                Random random = new Random();
+                int i = random.nextInt(currentIndex + 1 ); //swap currentIndex and i 
+                int temp = arr[currentIndex];
+                arr[currentIndex] = arr[i];
+                arr[i] = temp;
+                currentIndex--;
+            }
+            return arr;
+        }
+
+
+
+    public static void main(String[] args) {
+        int[] array = {5, 2, 34, 4, 6, 677, 12, 45, 15, 21, 1234, 612, 778, 303, 132, 245, 677};
+        shuffle(array);
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        System.out.println("========================");
+        shuffle(array);
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        System.out.println("========================");
+        shuffle(array);
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+    }
+    }

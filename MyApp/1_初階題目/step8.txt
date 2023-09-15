@@ -1,0 +1,26 @@
+初階題目 8 #  在數學上，費波那契數是以遞迴的方法來定義：
+
+    $$
+    F_0 = 1, F_1 = 1, \\
+    F_n = F_{n-1} + F_{n - 2},n\ge2
+    $$
+
+    首幾個費波那契數是： 1、 1、 2、 3、 5、 8、 13、 21、 34、 55、 89、 144、 233、 377、 610、 987、…。
+    請寫出一個函數”fibonacci()”，唯一的參數為一個大於或等於零的整數n，而return value為費波那契數列的第n項。
+
+
+    public class Main {
+
+    public static int fibonacci(int n ){
+        if (n == 0) return 1;
+        if (n == 1) return 1;
+        return fibonacci( n-1) + fibonacci(n-2 );
+        }
+
+        public static void main(String[] args) {
+            
+                }
+            }
+        
+    
+
